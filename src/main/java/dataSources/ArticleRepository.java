@@ -25,6 +25,8 @@ public class ArticleRepository extends AbstractRepository<Article> {
     }
 
 
+
+
     @Override
     public List<Article> findAll() {
         return dataSource;
