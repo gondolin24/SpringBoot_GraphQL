@@ -1,16 +1,16 @@
 package models;
 
 public class Comment {
-    private Long id;
+    private int id;
     private String text;
-    private Long articleId;
-    private Long authorId;
+    private int articleId;
+    private int authorId;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -22,19 +22,19 @@ public class Comment {
         this.text = text;
     }
 
-    public Long getArticleId() {
+    public int getArticleId() {
         return articleId;
     }
 
-    public void setArticleId(Long articleId) {
+    public void setArticleId(int articleId) {
         this.articleId = articleId;
     }
 
-    public Long getAuthorId() {
+    public int getAuthorId() {
         return authorId;
     }
 
-    public void setAuthorId(Long authorId) {
+    public void setAuthorId(int authorId) {
         this.authorId = authorId;
     }
 

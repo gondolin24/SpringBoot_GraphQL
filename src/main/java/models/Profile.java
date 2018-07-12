@@ -1,15 +1,15 @@
 package models;
 
 public class Profile {
-    private Long id;
+    private int id;
     private String username;
     private String bio;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
