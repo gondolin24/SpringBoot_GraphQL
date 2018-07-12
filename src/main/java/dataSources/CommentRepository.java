@@ -22,7 +22,8 @@ public class CommentRepository extends AbstractRepository<Comment> {
     }
 
     @Override
-    public List<Comment> getAll() {
+    public List<Comment> findAll() {
         return dataSource;
     }
+
 }

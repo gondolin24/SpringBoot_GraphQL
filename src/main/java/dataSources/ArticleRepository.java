@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class ArticleRepository extends AbstractRepository<Article> {
@@ -25,7 +26,12 @@ public class ArticleRepository extends AbstractRepository<Article> {
 
 
     @Override
-    public List<Article> getAll() {
+    public List<Article> findAll() {
         return dataSource;
     }
+
+    public Article findOne(int id) {
+        return dataSource.stream().filter(aritcle -> aritcle.getId() == id).collect(Collectors.toList()).get(0);
+    }
+
 }

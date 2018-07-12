@@ -2,6 +2,8 @@ package graphQL.Resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import dataSources.ArticleRepository;
+import dataSources.CommentRepository;
+import dataSources.ProfileRepository;
 import models.Article;
 import models.Comment;
 import models.Profile;
@@ -14,10 +16,15 @@ import java.util.List;
 public class QueryResolver implements GraphQLQueryResolver {
 
     private final ArticleRepository articleRepository;
+    private final CommentRepository commentRepository;
+    private final ProfileRepository profileRepository;
 
     @Autowired
-    public QueryResolver(ArticleRepository articleRepository) {
+    public QueryResolver(ArticleRepository articleRepository, ProfileRepository profileRepository, CommentRepository commentRepository) {
         this.articleRepository = articleRepository;
+        this.profileRepository = profileRepository;
+        this.commentRepository = commentRepository;
+
 
     }
 
@@ -33,7 +40,7 @@ public class QueryResolver implements GraphQLQueryResolver {
         return profileRepository.findAll();
     }
 
-    public Article getArticle(Long id) {
+    public Article getArticle(int id) {
         return articleRepository.findOne(id);
     }
 }

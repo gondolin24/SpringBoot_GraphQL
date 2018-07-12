@@ -22,7 +22,7 @@ public class ProfileRepository extends AbstractRepository<Profile> {
     }
 
     @Override
-    public List<Profile> getAll() {
+    public List<Profile> findAll() {
         return dataSource;
     }
 }
