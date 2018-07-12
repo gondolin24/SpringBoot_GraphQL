@@ -1,16 +1,16 @@
 package models;
 
 public class Article {
-    private Long id;
+    private int id;
     private String title;
     private String text;
-    private Long authorId;
+    private int authorId;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -30,11 +30,11 @@ public class Article {
         this.text = text;
     }
 
-    public Long getAuthorId() {
+    public int getAuthorId() {
         return authorId;
     }
 
-    public void setAuthorId(Long authorId) {
+    public void setAuthorId(int authorId) {
         this.authorId = authorId;
     }
 
