@@ -1,11 +1,14 @@
 package dataSources;
 
 import models.Profile;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ProfileRepository extends AbstractRepository<Profile> {
     private static List<Profile> dataSource = new ArrayList<>();
 
@@ -15,6 +18,7 @@ public class ProfileRepository extends AbstractRepository<Profile> {
         Eduardo.setBio("Eduardo Likes Coffee");
         Eduardo.setId(1);
         Eduardo.setUsername("gondolin");
+        dataSource.add(Eduardo);
     }
 
     @Override
